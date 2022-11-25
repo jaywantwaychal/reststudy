@@ -28,9 +28,10 @@ public class UserDaoService {
             .get();
     }
 
-    public void addUser(User user) {
+    public User addUser(User user) {
         user.setId(++idCounter);
         userList.add(user);
+        return user;
     }
 
     public User updateUser(Integer id, User userNew) {
